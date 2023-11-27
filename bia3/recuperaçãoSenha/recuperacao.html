@@ -1,0 +1,57 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperação de Senha</title>
+  <link rel="stylesheet" href="recuperacao.css">
+
+</head>
+<body>
+
+  <div class="card">
+    <div id="step-email">      
+      <h2>Esqueceu sua senha?</h2>
+      <h3>Sem problemas! Recupere agora mesmo!</h3>
+      <form id="emailForm">
+        <label for="email">Digite seu e-mail:</label>
+        <input type="email" id="email" required>
+        <div class="button-container">
+            <button onclick="sendCode()">Enviar</button>
+          </div>
+      </form>
+    </div>
+    
+
+    <div id="step-code" style="display: none;">
+        <h2>Insira o Código</h2>
+        <form id="codeForm">
+          <label for="code">Código:</label>
+          <div id="codeInputs" class="code-inputs">
+            <!-- Inputs para cada dígito do código -->
+          </div>
+          <div class="button-container">
+            <button onclick="verifyCode()">Verificar</button>
+
+          
+          </div>
+        
+        </form>
+      </div>
+      <a class="button-container"  href="../login.html">
+        <button >Login</button>
+    </a>
+      <a class="button-container"  href="../index.html">
+        <button >Inicio</button>
+    </a>
+
+      <div class="popup" id="successPopup">
+        <div class="popup-content">
+          <p>Sua senha foi alterada com sucesso!</p>
+          <button class="close-button">Fechar</button>
+        </div>
+      </div>
+
+      
+  <script src="recuperacao.js"></script>
+</body>
+</html>

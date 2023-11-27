@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Faça Login</title>
+    <style>
+        /* Adicione estilos CSS para o popup */
+        .popup {
+            display: none;
+           
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.904);
+            z-index: 9999;
+            width: 300px;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="img-box">
+            <img src="images_cadastro/cadastro2.png">
+        </div>
+        <div class="form-box">
+            <h2>Faça seu login</h2>
+            <p> ou <a href="Cadastro.html">cadastre-se</a> </p>
+
+            <form action="Cadastro.html" id="cadastroForm">
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite o seu email">
+                </div>
+
+                <div class="input-group w50">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha">
+                </div>
+                <p> <a href="/recuperaçãoSenha/recuperacao.html">Esqueceu a senha?</a> </p>
+                <div class="input-group">
+                    <button id="cadastroBtn">Entrar</button>
+                </div>
+                <div class="input-group2">
+                    <a href="index.html">
+                        <button>Cadastrar</button>
+                    </a>
+                </div>
+
+            </form>
+
+            <!-- Popup de Cadastro -->
+            <div class="popup" id="cadastroPopup">
+                <p>Seja Bem-vindo!</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('cadastroBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do botão
+
+            // Mostra o popup
+            document.getElementById('cadastroPopup').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

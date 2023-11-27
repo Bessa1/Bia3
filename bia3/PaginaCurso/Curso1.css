@@ -1,0 +1,923 @@
+/* ESTILO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #A230A4;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+h2.titulo {
+    color: #0e2692;
+    font-size: 38px;
+    text-align: center;
+
+}
+
+h2.titulo span {
+    color: #A230A4;
+}
+
+button:hover {
+    box-shadow: 0px 0px 8px #A230A4;
+    transform: scale(1.05);
+    transition: .2s;
+
+
+}
+
+
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+    padding: 40px 4%;
+    transition: all 0.3s ease; /* Transição para suavizar a mudança */
+    position: absolute; /* Inicialmente absoluto para não sobrepor conteúdo */
+    width: 100%;
+    background-color: transparent; /* Cor de fundo transparente */
+    z-index: 9999;
+}
+
+/* Estilos para quando o menu estiver fixo */
+header.fixed {
+    position: fixed;
+    background-color: #fff; /* Cor de fundo do menu fixo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+}
+
+/* Mantendo os estilos originais */
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: rgb(121, 119, 119);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #000000;
+    transform: scale(1.08);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 18px
+}
+
+/* Estilos para o conteúdo abaixo do cabeçalho */
+.content {
+    height: 1500px; 
+    padding-top: 100px; 
+}
+
+
+ 
+
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 180px 4%;
+}
+
+
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    padding-top: 180px;
+    padding-right: 1px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #8c00ff;
+    font-size: 50px;
+}
+
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    max-width: 160%; 
+    animation: flutuar 2s ease-in-out infinite alternate;
+  
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+/* ESTILO DAS ESPECILIADDES */
+
+
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(92, 92, 92)070;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #fff;
+
+}
+
+
+
+/* Estilo para a seção topo-do-site */
+section.topo-do-site {
+    margin-top: 0px; /* Ajuste o valor conforme necessário */
+}
+
+/*ESTILO MENU MOBILE */
+
+.btn-abrir-menu{
+    display: none;
+}
+
+
+.menu-mobile {
+    background: #7F30E5;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+
+}
+
+.menu-mobile .btn-fechar i {
+    color: #fff;
+    font-size: 30px;
+
+
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+    
+
+}
+
+.btn-abrir-menu i{ 
+    color: #A230A4;
+    font-size: 40px;
+
+}
+
+.overlay-menu{
+
+    background-color: #ffffff8e;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+
+
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: #A230A4;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #A230A4;
+    font-size: 50px;
+}
+
+
+.topo-do-site .txt-topo-site p {
+    color: #3230a4;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECILIADDES */
+
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: rgb(17, 38, 129);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(92, 92, 92)070;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #A230A4;
+
+}
+
+.especialidades .especialidades-box i {
+    /* COR INCONES */
+
+    font-size: 70px;
+    color: #A230A4;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+/* ESTILO DO SOBRE */
+
+section.sobre {
+    padding: 80px 4%;
+}
+
+.sobre .txt-sobre {
+    color: #3230a4;
+
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #A230A4;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 0;
+    background-color: #A230A4;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+
+/*
+.img-sobre img {
+    max-width: 500px; 
+    height: auto; 
+} */
+
+/* CURSOS MAIS PROCURADOS */
+section.portifolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1a
+}
+
+section.portifolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-color: #A230A4;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 2s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* FILTRO FORMULARIO */
+
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input {
+    width: 100%;
+    background-color: #a230a431;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #A230A4;
+}
+
+form .btn-contato {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    margin-top: none;
+    background-color: #a230a42d;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+form input::placeholder {
+
+    /* aqui posso mudar a cor do fundo do formulario */
+}
+
+
+
+/* RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 4px 10px rgba(126, 117, 117, 0.267);
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+
+
+}
+
+footer .line-footer p i {
+    color: #A230A4;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #A230A4;
+}
+
+.borda {
+    border-top: 2px solid #A230A4;
+}
+
+
+/* RESPONSIVIDADE */
+
+
+
+@media screen and (max-width: 1020px) {
+
+    /* CLASSES GERAIS  */
+
+     
+
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+
+    }
+
+    /* CABEÇALHO  */
+
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    /*TOPO DO SITE*/
+
+
+    .btn-abrir-menu{
+        display: block;
+    }
+
+
+    .topo-do-site h1 {
+
+        font-size: 32px;
+
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+
+    }
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    /*ESPECIALIDADES */
+    section.especialidades {
+        padding: 40px 8%;
+    }
+
+    /*OBJETIVO */
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%;
+    }
+
+    /*CURSOS */
+    section.portifolio {
+        padding: 80px 8%;
+
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        height: 460px;
+
+    }
+
+    section.portifolio .flex {
+        gap: 60px;
+    }
+
+    /*RODAPÉ */
+
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img-background {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+  }
+  
+  .rating {
+    margin-top: 10px;
+  }
+  
+  .rating i {
+    color: #f00;
+    font-size: 20px;
+  }
+  
+  .comments {
+    margin-top: 20px;
+  }
+
+  .comment {
+    font-size: 16px;
+  }
+  
+  .author {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .button {
+    background-color: #f00;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .rating {
+    margin-top: 10px;
+  }
+  
+  .rating i {
+    color: #f00;
+    font-size: 20px;
+  }
+  
+  .rating-text {
+    color: #f00;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .container {
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+
+/* Reset de Estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+footer {
+  /* Estilize seu cabeçalho e rodapé aqui */
+  padding: 20px;
+  background-color: #ffffff;
+  color: #fff;
+  text-align: center;
+}
+
+main {
+  padding: 150px;
+}
+
+.course-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ratings {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.student-comments {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.student-comments h2{
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+.comment {
+  margin-bottom: 15px;
+}
+
+.comment p {
+  margin-bottom: 5px;
+}
+.student-comments {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.student-info {
+
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.student-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-text {
+  text-align: left;
+}
+
+.comment-text p {
+  margin-bottom: 5px;
+}
+
+
+/* Estilos Gerais */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .left-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .left-section img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .left-section h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .divider {
+    border: 1px solid #ccc;
+    margin: 15px 0;
+  }
+  
+  .info-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .right-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .right-section p {
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .right-section button {
+    padding: 10px 20px;
+    background-color: #A230A4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Para posicionar o botão no final */
+  }
+  
+  .right-section button:hover {
+    background-color: #8a1b7f;
+  }
+
+  .left-section,
+.right-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.vertical-line {
+  border-left: 1px solid #ccc;
+  height: 100%;
+
+}
+
+
